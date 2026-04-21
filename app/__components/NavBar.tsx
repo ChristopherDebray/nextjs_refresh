@@ -4,9 +4,13 @@ export function NavBar() {
   return (
     <header className="bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50 no-border shadow-none">
       <nav className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
-        <div className="text-xl font-extrabold tracking-tighter text-green-900 dark:text-green-50 font-manrope">
+        <Link
+          href="/"
+          prefetch={false}
+          className="text-xl font-extrabold tracking-tighter text-green-900 dark:text-green-50 font-manrope"
+        >
           FluidSteward
-        </div>
+        </Link>
         <div className="hidden md:flex items-center gap-8 font-manrope font-semibold tracking-tight text-sm">
           <Link
             href="/"

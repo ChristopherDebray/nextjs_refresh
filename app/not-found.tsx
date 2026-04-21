@@ -60,11 +60,6 @@ export default function NotFound() {
                 Besoin d'aide ?
               </a>
             </div>
-            <div className="pt-12">
-              <div className="flex items-center justify-center gap-2 text-primary font-headline font-extrabold text-lg">
-                EcoFleet
-              </div>
-            </div>
           </div>
         </div>
       </main>
