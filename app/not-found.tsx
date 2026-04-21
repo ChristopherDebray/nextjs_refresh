@@ -1,8 +1,12 @@
-import Image from 'next/image'
+import Image from "next/image";
+import { NavBar } from "./__components/NavBar";
+import Footer from "./__components/Footer";
+import Icon from "./__components/Icon";
 
 export default function NotFound() {
   return (
     <>
+      <NavBar />
       <main className="grow flex items-center justify-center relative overflow-hidden px-6 py-12">
         <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary rounded-full blur-[120px]"></div>
@@ -27,12 +31,7 @@ export default function NotFound() {
             </div>
             <div className="relative py-12 group">
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-10 transition-opacity duration-700">
-                <span
-                  className="material-symbols-outlined text-[200px]"
-                  data-icon="route"
-                >
-                  route
-                </span>
+                <Icon name="route" className="text-[200px]" />
               </div>
               <Image
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5-wc8TOSnx6VAMRSXb0u4U_axKZhHOQngCnYauVl_yFyFU9p2n3ocuNT-hP8C3lVwUv1hxSLIKdvx8DDhppMMvNLZEWRhHQfh4KvRq_1HtviZ_4kat_E4LCbtaXhiHDYA0VH06ueIVtExyGiNz4Kk-IL-S835lyX_2h4jL00zid7dxJ1vLo2ZAlIjfEeTV4Z2gTB38oBWfPPAQ-FKF6AtYxTzxQgrjCcj_jULGBkaXpGtBYa_me-7JhfCVC5qq2JZkZhpIdvekYE"
@@ -47,24 +46,17 @@ export default function NotFound() {
                 className="group relative px-8 py-4 bg-primary text-on-primary font-headline font-bold rounded-full transition-all duration-300 hover:shadow-[0_0_32px_0_rgba(24,106,34,0.3)] active:scale-95 flex items-center gap-2"
                 href="/dashboard"
               >
-                <span
-                  className="material-symbols-outlined transition-transform group-hover:-translate-x-1"
-                  data-icon="arrow_back"
-                >
-                  arrow_back
-                </span>
+                <Icon
+                  name="arrow_back"
+                  className="transition-transform group-hover:-translate-x-1"
+                />
                 Retour au Dashboard
               </a>
               <a
                 className="px-8 py-4 bg-surface-container-low text-secondary font-headline font-semibold rounded-full hover:bg-surface-container-high transition-colors active:scale-95 flex items-center gap-2"
                 href="/help"
               >
-                <span
-                  className="material-symbols-outlined"
-                  data-icon="help_center"
-                >
-                  help_center
-                </span>
+                <Icon name="help_center" />
                 Besoin d'aide ?
               </a>
             </div>
@@ -76,38 +68,7 @@ export default function NotFound() {
           </div>
         </div>
       </main>
-      <footer className="bg-slate-50 dark:bg-slate-950 w-full mt-auto py-12 border-t border-slate-200/50 dark:border-slate-800/50">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 max-w-screen-2xl mx-auto">
-          <div className="flex flex-col gap-4">
-            <div className="font-['Manrope'] font-bold text-slate-900 dark:text-white flex items-center gap-2">
-              <span
-                className="material-symbols-outlined text-green-900 dark:text-green-500"
-                data-icon="eco"
-              >
-                eco
-              </span>
-              EcoFleet Logistics
-            </div>
-            <p className="font-['Inter'] text-sm text-slate-500 dark:text-slate-400">
-              © 2024 EcoFleet Logistics. Committed to Fluid Stewardship.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-center">
-            <a className="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors cursor-pointer">
-              Privacy Policy
-            </a>
-            <a className="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors cursor-pointer">
-              Terms of Service
-            </a>
-            <a className="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors cursor-pointer">
-              Help Center
-            </a>
-            <a className="font-['Inter'] text-sm text-slate-500 dark:text-slate-400 hover:text-green-700 dark:hover:text-green-300 transition-colors cursor-pointer">
-              Fleet Status
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

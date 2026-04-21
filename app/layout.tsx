@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { NavBar } from "./__components/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,7 +43,6 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
-        <NavBar />
         {children}
       </body>
     </html>
