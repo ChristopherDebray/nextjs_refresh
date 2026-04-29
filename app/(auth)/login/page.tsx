@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LoginForm from "./LoginForm";
 
 export default function Login() {
   return (
@@ -33,78 +34,7 @@ export default function Login() {
             </p>
           </div>
           <div className="bg-surface-container-lowest rounded-xl p-8 shadow-sm ring-1 ring-outline-variant/15">
-            <form className="space-y-6">
-              <div className="space-y-2">
-                <label
-                  className="block font-label text-sm font-medium text-secondary"
-                  htmlFor="email"
-                >
-                  Adresse email
-                </label>
-                <div className="relative">
-                  <input
-                    className="w-full h-12 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary transition-all text-on-surface placeholder:text-outline"
-                    id="email"
-                    name="email"
-                    placeholder="nom@exemple.com"
-                    required=""
-                    type="email"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <label
-                    className="block font-label text-sm font-medium text-secondary"
-                    htmlFor="password"
-                  >
-                    Mot de passe
-                  </label>
-                  <a
-                    className="text-xs font-semibold text-primary hover:text-primary-container transition-colors"
-                    href="#"
-                  >
-                    Oublié ?
-                  </a>
-                </div>
-                <div className="relative">
-                  <input
-                    className="w-full h-12 px-4 rounded-lg bg-surface-container-high border-none focus:ring-2 focus:ring-primary transition-all text-on-surface placeholder:text-outline"
-                    id="password"
-                    name="password"
-                    placeholder="••••••••"
-                    required=""
-                    type="password"
-                  />
-                </div>
-              </div>
-              <div className="flex items-center">
-                <input
-                  className="h-4 w-4 rounded border-none bg-surface-container-high text-primary focus:ring-primary"
-                  id="remember"
-                  name="remember"
-                  type="checkbox"
-                />
-                <label
-                  className="ml-2 block text-sm text-secondary"
-                  htmlFor="remember"
-                >
-                  Se souvenir de moi
-                </label>
-              </div>
-              <button
-                className="w-full h-12 bg-gradient-to-br from-primary to-primary-container text-on-primary font-semibold rounded-full hover:opacity-90 active:scale-95 transition-all shadow-md flex items-center justify-center gap-2"
-                type="submit"
-              >
-                Se connecter
-                <span
-                  className="material-symbols-outlined text-sm"
-                  data-icon="login"
-                >
-                  login
-                </span>
-              </button>
-            </form>
+            <LoginForm />
             <div className="relative my-8">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-outline-variant/20"></div>
